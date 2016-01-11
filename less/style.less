@@ -1,0 +1,375 @@
+@import "reset";
+@import "flex";
+
+/* css code start */
+
+@color1: #54d9e0;
+@color2: #3e4445;
+
+.icon-no {
+    width           : 14px;
+    height          : 14px;
+    display         : inline-block;
+    background      : url(../images/button-follow-active@2x.png);
+    background-size : cover;
+}
+.icon-ok {
+    width           : 14px;
+    height          : 14px;
+    display         : inline-block;
+    background      : url(../images/button-follow-active@2x.png);
+    background-size : cover;
+}
+figure {
+    padding: 7px 0 0 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+    display: inline-block;
+}
+header {
+    height: 40px;
+    background: @color1;
+    .flex(); 
+    .flex-justify(space-between);
+    .flex-align-items(center);
+    .flex-direction(row);
+    .logo {
+        padding-left: 20px;
+        i {
+            display: block;
+            width: 62px;
+            height: 31px;
+            background: url(../images/naitang_logo.png);
+            background-size: cover;
+        }
+    }
+    .open-app {
+        margin-right: 20px;
+        font-size: 15px;
+        a {
+            color: white;
+        }
+        span {
+            margin-left: 5px;
+        }
+    }
+}
+.content {
+    .caption {
+        display: none;
+    }
+    .attachment {
+        img {
+            height: auto !important;
+        }
+    }
+    a[data-trix-attachment] {
+        pointer-events:none;
+    }
+    .user {
+        .img {
+            height: 138px;
+            background-size: cover !important;
+        }
+        .avatar {
+            position: relative;
+            width: 80px;
+            margin: -60px auto 0;
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+            }
+            span {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 0;
+                bottom: 3px;
+                &.v1 {
+                    background: url(../images/verified-1@2x.png);
+                    background-size: cover;
+                }
+                &.v2 {
+                    background: url(../images/verified-2@2x.png);
+                    background-size: cover;
+                }
+                &.v3 {
+                    background: url(../images/verified-3@2x.png);
+                    background-size: cover;
+                }
+            }
+        }
+        .name {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 800;
+            color:@color2;
+        }
+        .signature {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: @color2;
+        }
+        .follow {
+            margin-top: 25px;
+            text-align: center;
+            a {
+                background: #EDED63;
+                color: #7e7e10;
+                font-size: 14px;
+                display: inline-block;
+                border-radius: 3px;
+                padding: 10px;
+                span {
+                    margin-left: 7px;
+                }
+                i, span {
+                    vertical-align : middle;
+                }
+            }
+            &.followed {
+                a {
+                    background : #e8eeee;
+                    color      : #a5b0b1;
+                }
+            }
+        }
+    }
+    .intro {
+        position: relative;
+        margin: 38px 15px 30px;
+        padding: 15px;
+        border: 1px solid @color1;
+        font-size: 15px;
+        line-height: 24px;
+        color: @color2;
+	img {
+            max-width: 100%;
+        }
+        .title {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: -15px;
+            text-align: center;
+            span {
+                padding: 0 20px;
+                display: inline-block;
+                background: #fff;
+                color: @color1;
+                font-size: 15px;
+                line-height: 1;
+            }
+        }
+    }
+    .myway {
+        margin: 0 15px;
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            i {
+                width: 104px;
+                height: 30px;
+                display: inline-block;
+                background: url(../images/myway@2x.png);
+                background-size: cover;
+            }
+        }
+        .list {
+            ul {
+                li {
+                    position: relative;
+                    font-size: 15px;
+                    padding-left: 15px;
+                    box-sizing: border-box;
+                    img {
+                        max-width: 100%;
+                    }
+                    &.subject {
+                        font-size: 15px;
+                        color: @color1;
+                        font-weight: 800;
+                        padding-bottom: 12px;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            width: 1px;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            background: @color1;
+                        }
+                        &:after {
+                            content: "";
+                            width: 7px;
+                            height: 7px;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: -3px;
+                            top: 4px;
+                            background: @color1;
+                        }
+                    }
+                    &.content {
+                        font-size: 15px;
+                        color: @color2;
+                        line-height: 24px;
+                        padding-bottom: 20px;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            width: 1px;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            background: @color1;
+                        }
+                    }
+                    &:first-child {
+                        &:before {
+                            height: 70%;
+                            top: 30%;
+                        }
+                    }
+                    &:nth-last-child(2) {
+                        &:before {
+                            height: 30%;
+                            top: 0;
+                        }
+                    }
+                    &:last-child {
+                        padding-bottom: 0;
+                        &:before {
+                            display: none;
+                        }
+                    }
+                    &.subject.nobefore {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mylife {
+        margin: 30px 15px;
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            i {
+                width: 104px;
+                height: 30px;
+                display: inline-block;
+                background: url(../images/mylife@2x.png);
+                background-size: cover;
+            }
+        }
+        .content {
+            font-size: 15px;
+            color: @color2;
+            line-height: 24px;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    .myinfo {
+        margin: 30px 15px 38px;
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            i {
+                width: 104px;
+                height: 30px;
+                display: inline-block;
+                background: url(../images/myinfo@2x.png);
+                background-size: cover;
+            }
+        }
+        .content {
+            text-align: center;
+            a {
+                display: inline-block;
+            }
+            a + a {
+                margin-left: 17px;
+            }
+            i {
+                width: 38px;
+                height: 38px;
+                display: inline-block;
+                &.naitang {
+                    background: url(../images/icon-naitang@2x.png);
+                    background-size: cover;
+                }
+                &.weibo {
+                    background: url(../images/icon-weibo@2x.png);
+                    background-size: cover;
+                }
+                &.weixin {
+                    background: url(../images/icon-wechat@2x.png);
+                    background-size: cover;
+                }
+                &.ins {
+                    background: url(../images/icon-ins@2x.png);
+                    background-size: cover;
+                }
+                &.facebook {
+                    background: url(../images/icon-facebook@2x.png);
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+.weixin {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top :0;
+    background: #f1f3f3;
+    z-index: 10;
+    text-align: right;
+    img {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

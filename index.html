@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>时尚猎人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css?v201512021212" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?v201512021212" />
+</head>
+
+<body>
+    <!--Is Hidden Start-->
+    <header>
+        <div class="logo"><a href="/app_dev.php/"><i></i></a></div>
+        <div class="open-app">
+            <a class="openApp" @click="openApp" href="javascript:;"><i class="iconfont icon-shouji"></i><span>打开App</span></a>
+        </div>
+    </header>
+    <!--Is Hidden End-->
+    <div class="content">
+        <!--Is Hidden Start-->
+        <div class="user">
+            <div class="img" :style="user.background"></div>
+            <div class="avatar"><img :src="user.avatar"><span v-if="user.level" class="v v{{ user.level }}"></span></div>
+            <div class="name">{{ user.name }}</div>
+            <div class="signature">{{ user.signature }}</div>
+        </div>
+        <!--Is Hidden End-->
+        <div class="intro">
+            {{{ intro.content }}}
+            <div class="title"><span>{{ intro.title }}</span></div>
+        </div>
+        <div class="myway">
+            <div class="title"><i></i></div>
+            <div class="list">
+                <ul>
+                    <template v-for="item in myway.list">
+                        <li v-if="myway.total > 1" class="subject">{{ item.title }}</li>
+                        <li class="content">{{{ item.content }}}</li>
+                    </template>
+                </ul>
+            </div>
+        </div>
+        <div class="mylife">
+            <div class="title"><i></i></div>
+            <div class="content">{{{ mylife }}}</div>
+        </div>
+        <div class="myinfo">
+            <my-info :myinfo="myinfo"></my-info>
+        </div>
+    </div>
+    <div class="weixin" style="display: none;"><img src="images/forios.png"></div>
+    <script src="bulid/vendor.bundle.js"></script>
+    <script src="bulid/fashion.bundle.js"></script>
+</body>
+
+</html>

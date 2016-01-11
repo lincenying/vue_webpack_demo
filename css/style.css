@@ -1,0 +1,464 @@
+/* 清除内外边距 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+fieldset,
+lengend,
+button,
+input,
+textarea,
+th,
+td {
+  /* table elements 表格元素 */
+  margin: 0;
+  padding: 0;
+}
+/* 设置默认字体 */
+body,
+button,
+input,
+select,
+textarea {
+  /* for ie */
+  /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+  font: 12px/1 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+  /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+h1 {
+  font-size: 18px;
+  /* 18px / 12px = 1.5 */
+}
+h2 {
+  font-size: 16px;
+}
+h3 {
+  font-size: 14px;
+}
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+/* 将斜体扶正 */
+code,
+kbd,
+pre,
+samp,
+tt {
+  font-family: "Courier New", Courier, monospace;
+}
+/* 统一等宽字体 */
+small {
+  font-size: 12px;
+}
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+/* 重置列表元素 */
+ul,
+ol {
+  list-style: none;
+}
+/* 重置文本格式元素 */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+abbr[title],
+acronym[title] {
+  /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+q:before,
+q:after {
+  content: '';
+}
+/* 重置表单元素 */
+legend {
+  color: #000;
+}
+/* for ie6 */
+fieldset,
+img {
+  border: none;
+}
+/* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 使得表单元素在 ie 下能继承字体大小 */
+}
+/* 重置表格元素 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 重置 hr */
+hr {
+  border: none;
+  height: 1px;
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+  overflow-y: scroll;
+}
+/* justify-content 旧版webkit兼容 */
+/* align-items 旧版webkit兼容 */
+/* webkit-box-orient 旧版webkit兼容 */
+/* css code start */
+.icon-no {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background: url(../images/button-follow-active@2x.png);
+  background-size: cover;
+}
+.icon-ok {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background: url(../images/button-follow-active@2x.png);
+  background-size: cover;
+}
+figure {
+  padding: 7px 0 0 0;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  display: inline-block;
+}
+header {
+  height: 40px;
+  background: #54d9e0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+header .logo {
+  padding-left: 20px;
+}
+header .logo i {
+  display: block;
+  width: 62px;
+  height: 31px;
+  background: url(../images/naitang_logo.png);
+  background-size: cover;
+}
+header .open-app {
+  margin-right: 20px;
+  font-size: 15px;
+}
+header .open-app a {
+  color: white;
+}
+header .open-app span {
+  margin-left: 5px;
+}
+.content .caption {
+  display: none;
+}
+.content .attachment img {
+  height: auto !important;
+}
+.content a[data-trix-attachment] {
+  pointer-events: none;
+}
+.content .user .img {
+  height: 138px;
+  background-size: cover !important;
+}
+.content .user .avatar {
+  position: relative;
+  width: 80px;
+  margin: -60px auto 0;
+}
+.content .user .avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.content .user .avatar span {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+}
+.content .user .avatar span.v1 {
+  background: url(../images/verified-1@2x.png);
+  background-size: cover;
+}
+.content .user .avatar span.v2 {
+  background: url(../images/verified-2@2x.png);
+  background-size: cover;
+}
+.content .user .avatar span.v3 {
+  background: url(../images/verified-3@2x.png);
+  background-size: cover;
+}
+.content .user .name {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #3e4445;
+}
+.content .user .signature {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #3e4445;
+}
+.content .user .follow {
+  margin-top: 25px;
+  text-align: center;
+}
+.content .user .follow a {
+  background: #EDED63;
+  color: #7e7e10;
+  font-size: 14px;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 10px;
+}
+.content .user .follow a span {
+  margin-left: 7px;
+}
+.content .user .follow a i,
+.content .user .follow a span {
+  vertical-align: middle;
+}
+.content .user .follow.followed a {
+  background: #e8eeee;
+  color: #a5b0b1;
+}
+.content .intro {
+  position: relative;
+  margin: 38px 15px 30px;
+  padding: 15px;
+  border: 1px solid #54d9e0;
+  font-size: 15px;
+  line-height: 24px;
+  color: #3e4445;
+}
+.content .intro img {
+  max-width: 100%;
+}
+.content .intro .title {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -15px;
+  text-align: center;
+}
+.content .intro .title span {
+  padding: 0 20px;
+  display: inline-block;
+  background: #fff;
+  color: #54d9e0;
+  font-size: 15px;
+  line-height: 1;
+}
+.content .myway {
+  margin: 0 15px;
+}
+.content .myway .title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.content .myway .title i {
+  width: 104px;
+  height: 30px;
+  display: inline-block;
+  background: url(../images/myway@2x.png);
+  background-size: cover;
+}
+.content .myway .list ul li {
+  position: relative;
+  font-size: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+.content .myway .list ul li img {
+  max-width: 100%;
+}
+.content .myway .list ul li.subject {
+  font-size: 15px;
+  color: #54d9e0;
+  font-weight: 800;
+  padding-bottom: 12px;
+}
+.content .myway .list ul li.subject:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #54d9e0;
+}
+.content .myway .list ul li.subject:after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  left: -3px;
+  top: 4px;
+  background: #54d9e0;
+}
+.content .myway .list ul li.content {
+  font-size: 15px;
+  color: #3e4445;
+  line-height: 24px;
+  padding-bottom: 20px;
+}
+.content .myway .list ul li.content:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #54d9e0;
+}
+.content .myway .list ul li:first-child:before {
+  height: 70%;
+  top: 30%;
+}
+.content .myway .list ul li:nth-last-child(2):before {
+  height: 30%;
+  top: 0;
+}
+.content .myway .list ul li:last-child {
+  padding-bottom: 0;
+}
+.content .myway .list ul li:last-child:before {
+  display: none;
+}
+.content .myway .list ul li.subject.nobefore:before {
+  display: none;
+}
+.content .mylife {
+  margin: 30px 15px;
+}
+.content .mylife .title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.content .mylife .title i {
+  width: 104px;
+  height: 30px;
+  display: inline-block;
+  background: url(../images/mylife@2x.png);
+  background-size: cover;
+}
+.content .mylife .content {
+  font-size: 15px;
+  color: #3e4445;
+  line-height: 24px;
+}
+.content .mylife .content img {
+  max-width: 100%;
+}
+.content .myinfo {
+  margin: 30px 15px 38px;
+}
+.content .myinfo .title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.content .myinfo .title i {
+  width: 104px;
+  height: 30px;
+  display: inline-block;
+  background: url(../images/myinfo@2x.png);
+  background-size: cover;
+}
+.content .myinfo .content {
+  text-align: center;
+}
+.content .myinfo .content a {
+  display: inline-block;
+}
+.content .myinfo .content a + a {
+  margin-left: 17px;
+}
+.content .myinfo .content i {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+}
+.content .myinfo .content i.naitang {
+  background: url(../images/icon-naitang@2x.png);
+  background-size: cover;
+}
+.content .myinfo .content i.weibo {
+  background: url(../images/icon-weibo@2x.png);
+  background-size: cover;
+}
+.content .myinfo .content i.weixin {
+  background: url(../images/icon-wechat@2x.png);
+  background-size: cover;
+}
+.content .myinfo .content i.ins {
+  background: url(../images/icon-ins@2x.png);
+  background-size: cover;
+}
+.content .myinfo .content i.facebook {
+  background: url(../images/icon-facebook@2x.png);
+  background-size: cover;
+}
+.weixin {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #f1f3f3;
+  z-index: 10;
+  text-align: right;
+}
+.weixin img {
+  max-width: 100%;
+}
