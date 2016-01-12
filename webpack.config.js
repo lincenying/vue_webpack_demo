@@ -4,11 +4,11 @@ var path = require('path');
 module.exports = {
     entry: {
         fashion: './src/fashion.js',
+        form: './src/form.js',
         vendor: [
             'vue',
             'vue-resource'
         ]
-
     },
     output: {
         filename: '[name].bundle.js',

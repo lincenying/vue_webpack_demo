@@ -23,7 +23,8 @@ module.exports = {
             naitang: "http://www.baidu.com",
             weibo: "http://www.weibo.com"
         },
-        mobile: ""
+        mobile: "",
+        weixinShow: false
     },
     ready: function() {
         var isMobile = require("./isMobile")();
@@ -37,7 +38,9 @@ module.exports = {
         loadMore: function() {
             var self = this;
             self.myway.page++;
-            self.$http.get('./src/test.json', {}, {
+            self.$http.get('./src/test.json', {
+                page: self.myway.page
+            }, {
                 headers: {
                     "X-Requested-With": "XMLHttpRequest"
                 },

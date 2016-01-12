@@ -1,7 +1,7 @@
 module.exports = {
-    template: require("./info.html"),
+    template: require("../tpl/info.html"),
     props: ['myinfo'],
     data: function() {
-        
+
     }
 };
