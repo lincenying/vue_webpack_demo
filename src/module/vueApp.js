@@ -22,9 +22,12 @@ module.exports = {
         myinfo: {
             naitang: "http://www.baidu.com",
             weibo: "http://www.weibo.com"
-        }
+        },
+        mobile: ""
     },
     ready: function() {
+        var isMobile = require("./isMobile")();
+        this.mobile = isMobile;
         this.loadMore();
     },
     methods: {

@@ -12,7 +12,8 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js',
-        path: 'bulid'
+        path: 'bulid',
+        publicPath: "bulid/"
     },
 
     resolve: {
